@@ -7,14 +7,14 @@ public class Model {
     private String lastname;
     private String email;
     private String phone;
-
+    private String memoryType;
 
     public Model() {
 
     }
 
-    public Model(String postcode, String firstname, String lastname, String email, String phone) {
-        if(postcode == "" || firstname == "" || lastname == "" || email == "" || phone == "") {
+    public Model(String postcode, String firstname, String lastname, String email, String phone, String memoryType) {
+        if(postcode == "" || firstname == "" || lastname == "" || email == "" || phone == "" ) {
             throw new IllegalArgumentException("Field Cannot Be Empty");
         } else {
             this.postcode = postcode;
@@ -22,6 +22,7 @@ public class Model {
             this.lastname = lastname;
             this.email = email;
             this.phone = phone;
+            this.memoryType = memoryType;
         }
     }
     public String getFirstname() {
@@ -53,5 +54,11 @@ public class Model {
     }
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+    public String getMemoryType() {
+        return memoryType;
+    }
+    public void setMemoryType(String memoryType) {
+        this.memoryType = memoryType;
     }
 }

@@ -16,6 +16,7 @@ public class Controller {
         view.getPostcodeTextfield().setText(model.getPostcode());
         view.getEmailTextfield().setText(model.getEmail());
         view.getPhoneTextfield().setText(model.getPhone());
+        //view.getTypeComboBox().setText(model.getMemoryType());
     }
     public void initController() {
         view.getSaveDetailsButton().addActionListener(e -> saveDetails());
