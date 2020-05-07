@@ -3,7 +3,7 @@ package ie.gmit;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-/*public class ModelTest {
+public class ModelTest {
 
     Model thisModel;
 
@@ -36,4 +36,4 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 }
 
- */
+
