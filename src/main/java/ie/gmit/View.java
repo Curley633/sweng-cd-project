@@ -137,51 +137,39 @@ public class View {
     public void setClose(JButton close) {
         this.close = close;
     }
-
     public JLabel getPostcodeLabel() {
         return postcodeLabel;
     }
-
     public void setPostcodeLabel(JLabel postcodeLabel) {
         this.postcodeLabel = postcodeLabel;
     }
-
     public JLabel getEmailLabel() {
         return emailLabel;
     }
-
     public void setEmailLabel(JLabel emailLabel) {
         this.emailLabel = emailLabel;
     }
-
     public JLabel getPhoneLabel() {
         return phoneLabel;
     }
-
     public void setPhoneLabel(JLabel phoneLabel) {
         this.phoneLabel = phoneLabel;
     }
-
     public JTextField getPostcodeTextfield() {
         return postcodeTextfield;
     }
-
     public void setPostcodeTextfield(JTextField postcodeTextfield) {
         this.postcodeTextfield = postcodeTextfield;
     }
-
     public JTextField getEmailTextfield() {
         return emailTextfield;
     }
-
     public void setEmailTextfield(JTextField emailTextfield) {
         this.emailTextfield = emailTextfield;
     }
-
     public JTextField getPhoneTextfield() {
         return phoneTextfield;
     }
-
     public void setPhoneTextfield(JTextField phoneTextfield) {
         this.phoneTextfield = phoneTextfield;
     }
