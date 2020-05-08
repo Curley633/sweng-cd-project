@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,6 +125,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Decrement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Decrement" />
+    <MESSAGE value="Stash 2" />
+    <MESSAGE value="Fixed Code and got rid of unwanted variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Code and got rid of unwanted variables" />
   </component>
 </project>

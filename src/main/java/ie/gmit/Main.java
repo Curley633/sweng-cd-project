@@ -7,7 +7,7 @@ import java.awt.*;
 public class Main {
     public static void main(String[] args) {
         // Assemble all the pieces of the MVC
-        Model m = new Model("H91W960", "James", "Curley", "curley@mail.com", "123");
+        Model m = new Model("James", "Curley");
 
         //View v = new View("Details");
         EventQueue.invokeLater(new View("Test"));

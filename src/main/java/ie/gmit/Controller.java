@@ -14,32 +14,21 @@ public class Controller {
     public void initView() {
         view.getFirstnameTextfield().setText(model.getFirstname());
         view.getLastnameTextfield().setText(model.getLastname());
-        view.getPostcodeTextfield().setText(model.getPostcode());
-        view.getEmailTextfield().setText(model.getEmail());
-        view.getPhoneTextfield().setText(model.getPhone());
-        //view.getTypeComboBox().setModel(model.getMemoryType());
+
     }
     public void initController() {
-        view.getSaveDetailsButton().addActionListener(e -> saveDetails());
-        view.showDetails().addActionListener(e -> showDetails());
+        view.getConfirmOrderButton().addActionListener(e -> confirmOrder());
         view.getClose().addActionListener(e -> closeModal());
     }
-    private void saveDetails() {
+    private void confirmOrder() {
         model.setFirstname(view.getFirstnameTextfield().getText());
         model.setLastname(view.getLastnameTextfield().getText());
-        model.setPostcode(view.getPostcodeTextfield().getText());
-        model.setEmail(view.getEmailTextfield().getText());
-        model.setPhone(view.getPhoneTextfield().getText());
+
         model.setMemoryType(view.getTypeComboBox().getModel());
         JOptionPane.showMessageDialog(null, "Details saved : " + "\n" + model.getFirstname()
-                + " " + model.getLastname() + "\n " + model.getPostcode()
-                + "\n " + model.getEmail() + "\n " + model.getPhone() + "\n " + model.getMemoryType(), "Info", JOptionPane.INFORMATION_MESSAGE);
+                + " " + model.getLastname()  + "\n " + model.getMemoryType(), "Info", JOptionPane.INFORMATION_MESSAGE);
     }
-    private void showDetails() {
-        JOptionPane.showMessageDialog(null,  model.getFirstname() + "\n " + model.getLastname()
-                + "\n " + model.getPostcode() + "\n " + model.getEmail()
-                + "\n " + model.getPhone()  + "\n " + model.getMemoryType(), "Info", JOptionPane.INFORMATION_MESSAGE);
-    }
+
     private void closeModal() {
         System.exit(0);
     }
