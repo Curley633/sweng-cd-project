@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af31cb7b-b5ea-4db3-839e-6616dcf58196" name="Default Changelist" comment="" />
+    <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +30,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bd0QKrn7IJ2vZEdUeDxvoTBTVD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Java/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - GMIT/5th Year/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -104,5 +122,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Decrement" />
+    <MESSAGE value="Stash 2" />
+    <MESSAGE value="Fixed Code and got rid of unwanted variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Code and got rid of unwanted variables" />
   </component>
 </project>

@@ -1,15 +1,12 @@
 package ie.gmit;
 
-import javafx.scene.control.ComboBox;
-
-import java.awt.BorderLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
-import javax.swing.*;
-import javax.swing.JPanel;
 
 public class View extends JPanel implements ActionListener, Runnable {
     // View uses Swing framework to display UI to user
@@ -29,7 +26,7 @@ public class View extends JPanel implements ActionListener, Runnable {
     private JTextField lastnameTextfield;
     private JTextField emailTextfield;
     private JTextField phoneTextfield;
-    private JButton saveDetailsButton;
+    private JButton confirmOrderButton;
     private JButton show;
     private JButton close;
 
@@ -54,7 +51,7 @@ public class View extends JPanel implements ActionListener, Runnable {
         finalMemoryTypes = memoryTypes;
         capComboBox = new JComboBox();
         models = new ComboBoxModel[1];
-        saveDetailsButton = new JButton("Save Details");
+        confirmOrderButton = new JButton("Confirm Order");
         show = new JButton("Show");
         close = new JButton("Close");
 
@@ -84,8 +81,6 @@ public class View extends JPanel implements ActionListener, Runnable {
         );
     }
 
-
-
     public JFrame getFrame() {
         return frame;
     }
@@ -93,7 +88,7 @@ public class View extends JPanel implements ActionListener, Runnable {
         this.frame = frame;
     }
     public JLabel getMemoryTypeLabel() {
-        return lastnameLabel;
+        return memoryTypeLabel;
     }
     public void setMemoryTypeLabel(JLabel memoryTypeLabel) {
         this.memoryTypeLabel = memoryTypeLabel;
@@ -134,11 +129,11 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setLastnameTextfield(JTextField lastnameTextfield) {
         this.lastnameTextfield = lastnameTextfield;
     }
-    public JButton getSaveDetailsButton() {
-        return saveDetailsButton;
+    public JButton getConfirmOrderButton() {
+        return confirmOrderButton;
     }
-    public void setSaveDetailsButton(JButton saveDetailsButton) {
-        this.saveDetailsButton = saveDetailsButton;
+    public void setConfirmOrderButton(JButton confirmOrderButton) {
+        this.confirmOrderButton = confirmOrderButton;
     }
     public JButton showDetails() {
         return show;
@@ -151,42 +146,6 @@ public class View extends JPanel implements ActionListener, Runnable {
     }
     public void setClose(JButton close) {
         this.close = close;
-    }
-    public JLabel getPostcodeLabel() {
-        return postcodeLabel;
-    }
-    public void setPostcodeLabel(JLabel postcodeLabel) {
-        this.postcodeLabel = postcodeLabel;
-    }
-    public JLabel getEmailLabel() {
-        return emailLabel;
-    }
-    public void setEmailLabel(JLabel emailLabel) {
-        this.emailLabel = emailLabel;
-    }
-    public JLabel getPhoneLabel() {
-        return phoneLabel;
-    }
-    public void setPhoneLabel(JLabel phoneLabel) {
-        this.phoneLabel = phoneLabel;
-    }
-    public JTextField getPostcodeTextfield() {
-        return postcodeTextfield;
-    }
-    public void setPostcodeTextfield(JTextField postcodeTextfield) {
-        this.postcodeTextfield = postcodeTextfield;
-    }
-    public JTextField getEmailTextfield() {
-        return emailTextfield;
-    }
-    public void setEmailTextfield(JTextField emailTextfield) {
-        this.emailTextfield = emailTextfield;
-    }
-    public JTextField getPhoneTextfield() {
-        return phoneTextfield;
-    }
-    public void setPhoneTextfield(JTextField phoneTextfield) {
-        this.phoneTextfield = phoneTextfield;
     }
 
     @Override
@@ -209,15 +168,12 @@ public class View extends JPanel implements ActionListener, Runnable {
         frame = new JFrame("Components Order System");
         frame.getContentPane().setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
+        frame.setSize(600, 250);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-        postcodeLabel = new JLabel("Postcode :");
         firstnameLabel = new JLabel("Firstname :");
         lastnameLabel = new JLabel("Lastname :");
-        emailLabel = new JLabel("Email :");
-        phoneLabel = new JLabel("Phone :");
         memoryTypeLabel = new JLabel("Memory Type :");
         capacityLabel = new JLabel("Capacity and Price :");
 
@@ -226,52 +182,36 @@ public class View extends JPanel implements ActionListener, Runnable {
         layout.setAutoCreateContainerGaps(true);
         layout.setHorizontalGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(memoryTypeLabel)
-                        .addComponent(capacityLabel)
                         .addComponent(firstnameLabel)
                         .addComponent(lastnameLabel)
-                        .addComponent(postcodeLabel)
-                        .addComponent(emailLabel)
-                        .addComponent(phoneLabel)
-                )
-
+                        .addComponent(memoryTypeLabel)
+                        .addComponent(capacityLabel))
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(firstnameTextfield)
                         .addComponent(lastnameTextfield)
-                        .addComponent(postcodeTextfield)
-                        .addComponent(emailTextfield)
-                        .addComponent(phoneTextfield))
+                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(show)
-                        .addComponent(close)).addComponent(saveDetailsButton));
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(close)).addComponent(confirmOrderButton));
 
         layout.setVerticalGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
-                        .addComponent(typeComboBox))
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(capacityLabel)
-                        .addComponent(capComboBox))
-
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
-                        .addComponent(firstnameTextfield).addComponent(saveDetailsButton).addComponent(show))
+                        .addComponent(firstnameTextfield))
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lastnameLabel)
                         .addComponent(lastnameTextfield))
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(postcodeLabel)
-                        .addComponent(postcodeTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
+                        .addComponent(typeComboBox))
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(emailLabel)
-                        .addComponent(emailTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(capacityLabel)
+                        .addComponent(capComboBox).addComponent(close).addComponent(confirmOrderButton))
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(phoneLabel)
-                        .addComponent(phoneTextfield).addComponent(close)));
+        );
 
-
-        layout.linkSize(SwingConstants.HORIZONTAL, saveDetailsButton);
-        layout.linkSize(SwingConstants.HORIZONTAL, show, close);
+        layout.linkSize(SwingConstants.HORIZONTAL,close, confirmOrderButton);
         frame.getContentPane().setLayout(layout);
 
     }

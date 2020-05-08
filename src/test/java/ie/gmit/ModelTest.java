@@ -15,24 +15,18 @@ public class ModelTest {
     @Test
     void testConstructorNoFirstName()
     {
-        assertThrows(IllegalArgumentException.class, () -> new Model("H91W960", "","curley",
-                "curley@mail.com","123"));
+        assertThrows(IllegalArgumentException.class, () -> new Model("","curley"));
     }
     @Test
     void testConstructorNoLastName()
     {
-        assertThrows(IllegalArgumentException.class, () -> new Model("H91W960", "james","",
-                "curley@mail.com","123"));
+        assertThrows(IllegalArgumentException.class, () -> new Model("james",""));
     }
     @Test
     void testConstructor() {
-        thisModel = new Model("H91W960", "james", "curley", "curley@mail.com",
-                "123");
-        assertEquals("H91W960", thisModel.getPostcode());
+        thisModel = new Model("james", "curley");
         assertEquals("james", thisModel.getFirstname());
         assertEquals("curley", thisModel.getLastname());
-        assertEquals("curley@mail.com", thisModel.getEmail());
-        assertEquals("123", thisModel.getPhone());
     }
 }
 
