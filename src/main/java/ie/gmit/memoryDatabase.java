@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class memoryDatabase {
-    public static Connection getConnection() throws Exception {
+    public static Connection getConnection() {
         try{
             String driver = "com.mysql.jdbc.Driver";
             String url = "jdbc:mysql://206.189.29.193:3306/swt?useSSL=false";
@@ -16,19 +16,19 @@ public class memoryDatabase {
 
             Class.forName(driver);
             Connection conn = DriverManager.getConnection(url,username,password);
-            System.out.println("Working");
+            System.out.println("Connected to Database");
             return conn;
         }
         catch (Exception e)
         {
             System.out.println(e);
         }
-
         return null;
     }
-    public static ArrayList<String> getMemTypes() throws Exception{
+
+    public static ArrayList<String> getMemTypes() {
         try{
-            Connection conn =   getConnection();
+            Connection conn = getConnection();
             PreparedStatement statement = conn.prepareStatement("SELECT memorytype from MemoryStock WHERE quantity > 0");
 
             ResultSet result = statement.executeQuery();
@@ -54,12 +54,31 @@ public class memoryDatabase {
         return null;
     }
 
+    public static int decrementQuantity(String memType, int capacity) {
+        int result = 0;
+        try {
+            Connection conn = getConnection();
+            PreparedStatement decrementQuantityStatement = conn.prepareStatement("UPDATE MemoryStock SET quantity = quantity - 1 WHERE memorytype = '"
+                    + memType + "' AND capacity = '"+ capacity +"' AND quantity > 0");
+            result = decrementQuantityStatement.executeUpdate();
+
+            if(result == 0) {
+                System.out.println("No Units Available");
+            }
+
+            System.out.println("Decrement Result: " + result);
+        } catch (Exception e) {
+            System.out.println("Decrement Quantity Error: " + e);
+        }
+        return result;
+    }
+
     public static ArrayList<String> getCapAndPrice(String memtypes) throws Exception{
         try{
-            Connection conn =   getConnection();
-            PreparedStatement statement = conn.prepareStatement("SELECT capacity, price from MemoryStock WHERE memorytype = '"+ memtypes +"' AND quantity > 0" );
+            Connection conn = getConnection();
+            PreparedStatement capacityAndPricestatement = conn.prepareStatement("SELECT capacity, price from MemoryStock WHERE memorytype = '"+ memtypes +"' AND quantity > 0" );
 
-            ResultSet result = statement.executeQuery();
+            ResultSet result = capacityAndPricestatement.executeQuery();
 
             ArrayList<String> array = new ArrayList<String>();
             String capAndPrice;
