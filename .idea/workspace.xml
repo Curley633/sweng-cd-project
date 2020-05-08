@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_49.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_49.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/memoryDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/memoryDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +27,10 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - GMIT/5th Year/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar!/" />
