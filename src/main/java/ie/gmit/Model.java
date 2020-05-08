@@ -1,20 +1,23 @@
 package ie.gmit;
 
+import javax.swing.*;
+
 public class Model {
+
 
     private String postcode;
     private String firstname;
     private String lastname;
     private String email;
     private String phone;
-
+    private ComboBoxModel memoryType;
 
     public Model() {
 
     }
 
     public Model(String postcode, String firstname, String lastname, String email, String phone) {
-        if(postcode == "" || firstname == "" || lastname == "" || email == "" || phone == "") {
+        if(postcode == "" || firstname == "" || lastname == "" || email == "" || phone == "" ) {
             throw new IllegalArgumentException("Field Cannot Be Empty");
         } else {
             this.postcode = postcode;
@@ -53,5 +56,12 @@ public class Model {
     }
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public ComboBoxModel getMemoryType() {
+        return memoryType;
+    }
+    public void setMemoryType(ComboBoxModel memoryType) {
+        this.memoryType = memoryType;
     }
 }

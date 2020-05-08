@@ -1,12 +1,7 @@
 package ie.gmit;
 
 import java.awt.BorderLayout;
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 
 public class View {
     // View uses Swing framework to display UI to user
@@ -16,6 +11,8 @@ public class View {
     private JLabel lastnameLabel;
     private JLabel emailLabel;
     private JLabel phoneLabel;
+    private JLabel memoryTypeLabel;
+    private JComboBox typeComboBox;
     private JTextField postcodeTextfield;
     private JTextField firstnameTextfield;
     private JTextField lastnameTextfield;
@@ -29,7 +26,7 @@ public class View {
         frame = new JFrame(title);
         frame.getContentPane().setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 200);
+        frame.setSize(500, 500);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         // Create UI elements
@@ -38,11 +35,18 @@ public class View {
         lastnameLabel = new JLabel("Lastname :");
         emailLabel = new JLabel("Email :");
         phoneLabel = new JLabel("Phone :");
+        memoryTypeLabel =  new JLabel("Memory Type :");
+
         postcodeTextfield = new JTextField();
         firstnameTextfield = new JTextField();
         lastnameTextfield = new JTextField();
         emailTextfield = new JTextField();
         phoneTextfield = new JTextField();
+
+
+        String[] memoryTypes = { "SD", "SSD", "HDD", "RAM", "SHD"};
+        typeComboBox = new JComboBox(memoryTypes);
+
         saveDetailsButton = new JButton("Save Details");
         show = new JButton("Show");
         close = new JButton("Close");
@@ -53,13 +57,17 @@ public class View {
         layout.setAutoCreateContainerGaps(true);
         layout.setHorizontalGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(memoryTypeLabel)
                         .addComponent(firstnameLabel)
                         .addComponent(lastnameLabel)
                         .addComponent(postcodeLabel)
                         .addComponent(emailLabel)
-                        .addComponent(phoneLabel))
+                        .addComponent(phoneLabel)
+                        )
+
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(firstnameTextfield)
                         .addComponent(lastnameTextfield)
                         .addComponent(postcodeTextfield)
@@ -70,6 +78,9 @@ public class View {
                         .addComponent(close)).addComponent(saveDetailsButton));
 
         layout.setVerticalGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
+                        .addComponent(typeComboBox))
+
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
                         .addComponent(firstnameTextfield).addComponent(saveDetailsButton).addComponent(show))
 
@@ -85,6 +96,8 @@ public class View {
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(phoneLabel)
                         .addComponent(phoneTextfield).addComponent(close)));
 
+
+
         layout.linkSize(SwingConstants.HORIZONTAL, saveDetailsButton);
         layout.linkSize(SwingConstants.HORIZONTAL, show, close);
         frame.getContentPane().setLayout(layout);
@@ -94,6 +107,18 @@ public class View {
     }
     public void setFrame(JFrame frame) {
         this.frame = frame;
+    }
+    public JLabel getMemoryTypeLabel() {
+        return lastnameLabel;
+    }
+    public void setMemoryTypeLabel(JLabel memoryTypeLabel) {
+        this.memoryTypeLabel = memoryTypeLabel;
+    }
+    public JComboBox getTypeComboBox() {
+        return typeComboBox;
+    }
+    public void setTypeComboBox(JComboBox typeComboBox) {
+        this.typeComboBox = typeComboBox;
     }
     public JLabel getFirstnameLabel() {
         return firstnameLabel;
