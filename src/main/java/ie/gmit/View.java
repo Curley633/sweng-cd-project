@@ -1,11 +1,15 @@
 package ie.gmit;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import javax.swing.*;
+import javax.swing.JPanel;
 
-public class View {
+public class View extends JPanel implements ActionListener, Runnable {
     // View uses Swing framework to display UI to user
     private JFrame frame;
     private JLabel postcodeLabel;
@@ -17,6 +21,7 @@ public class View {
     private JLabel capacityLabel;
     private JComboBox typeComboBox;
     private JComboBox capComboBox;
+    private ComboBoxModel[] models;
     private JTextField postcodeTextfield;
     private JTextField firstnameTextfield;
     private JTextField lastnameTextfield;
@@ -26,21 +31,23 @@ public class View {
     private JButton show;
     private JButton close;
 
+    ArrayList<String> finalMemoryTypes;
+
     public View(String title) {
-        frame = new JFrame(title);
-        frame.getContentPane().setLayout(new BorderLayout());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+//        frame = new JFrame(title);
+//        frame.getContentPane().setLayout(new BorderLayout());
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setSize(500, 500);
+//        frame.setLocationRelativeTo(null);
+//        frame.setVisible(true);
         // Create UI elements
-        postcodeLabel = new JLabel("Postcode :");
-        firstnameLabel = new JLabel("Firstname :");
-        lastnameLabel = new JLabel("Lastname :");
-        emailLabel = new JLabel("Email :");
-        phoneLabel = new JLabel("Phone :");
-        memoryTypeLabel = new JLabel("Memory Type :");
-        capacityLabel = new JLabel("Capacity and Price :");
+//        postcodeLabel = new JLabel("Postcode :");
+//        firstnameLabel = new JLabel("Firstname :");
+//        lastnameLabel = new JLabel("Lastname :");
+//        emailLabel = new JLabel("Email :");
+//        phoneLabel = new JLabel("Phone :");
+//        memoryTypeLabel = new JLabel("Memory Type :");
+//        capacityLabel = new JLabel("Capacity and Price :");
 
         postcodeTextfield = new JTextField();
         firstnameTextfield = new JTextField();
@@ -48,6 +55,7 @@ public class View {
         emailTextfield = new JTextField();
         phoneTextfield = new JTextField();
 
+        final String[] type = new String[1];
         ArrayList<String> memoryTypes = new ArrayList<String>();
         try {
             memoryTypes = memoryDatabase.getMemTypes();
@@ -55,76 +63,119 @@ public class View {
             System.out.println(e);
         }
         typeComboBox = new JComboBox(memoryTypes.toArray());
+        finalMemoryTypes = memoryTypes;
 //        typeComboBox.addItemListener(
 //            new ItemListener(){
-//                public void itemStateChanged()
+//                    public void itemStateChanged(ItemEvent event){
+//                        if(event.getStateChange() == ItemEvent.SELECTED){
+//                            type[0] = (String) finalMemoryTypes.toArray()[typeComboBox.getSelectedIndex()];
+//                            System.out.println(type[0]);
+//                        }
+//                }
 //            }
-//        )
-        ArrayList<String> capAndPrice = new ArrayList<String>();
-        try {
-            capAndPrice = memoryDatabase.getCapAndPrice((String) memoryTypes.toArray()[0]);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        capComboBox = new JComboBox(capAndPrice.toArray());
+//        );
+//        ArrayList<String> capAndPrice = new ArrayList<String>();
+//        try {
+//            capAndPrice = memoryDatabase.getCapAndPrice(type[0]);
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+        capComboBox = new JComboBox();
+        models = new ComboBoxModel[1];
+
+
+
+
+
         saveDetailsButton = new JButton("Save Details");
         show = new JButton("Show");
         close = new JButton("Close");
 
         // Add UI element to frame
-        GroupLayout layout = new GroupLayout(frame.getContentPane());
-        layout.setAutoCreateGaps(true);
-        layout.setAutoCreateContainerGaps(true);
-        layout.setHorizontalGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(memoryTypeLabel)
-                        .addComponent(capacityLabel)
-                        .addComponent(firstnameLabel)
-                        .addComponent(lastnameLabel)
-                        .addComponent(postcodeLabel)
-                        .addComponent(emailLabel)
-                        .addComponent(phoneLabel)
-                )
+//        GroupLayout layout = new GroupLayout(frame.getContentPane());
+//        layout.setAutoCreateGaps(true);
+//        layout.setAutoCreateContainerGaps(true);
+//        layout.setHorizontalGroup(layout.createSequentialGroup()
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+//                        .addComponent(memoryTypeLabel)
+//                        .addComponent(capacityLabel)
+//                        .addComponent(firstnameLabel)
+//                        .addComponent(lastnameLabel)
+//                        .addComponent(postcodeLabel)
+//                        .addComponent(emailLabel)
+//                        .addComponent(phoneLabel)
+//                )
+//
+//
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+//                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+//                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+//                        .addComponent(firstnameTextfield)
+//                        .addComponent(lastnameTextfield)
+//                        .addComponent(postcodeTextfield)
+//                        .addComponent(emailTextfield)
+//                        .addComponent(phoneTextfield))
+//
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(show)
+//                        .addComponent(close)).addComponent(saveDetailsButton));
+//
+//        layout.setVerticalGroup(layout.createSequentialGroup()
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
+//                        .addComponent(typeComboBox))
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(capacityLabel)
+//                        .addComponent(capComboBox))
+//
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
+//                        .addComponent(firstnameTextfield).addComponent(saveDetailsButton).addComponent(show))
+//
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lastnameLabel)
+//                        .addComponent(lastnameTextfield))
+//
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(postcodeLabel)
+//                        .addComponent(postcodeTextfield))
+//
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(emailLabel)
+//                        .addComponent(emailTextfield))
+//
+//                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(phoneLabel)
+//                        .addComponent(phoneTextfield).addComponent(close)));
+//
+//
+//        layout.linkSize(SwingConstants.HORIZONTAL, saveDetailsButton);
+//        layout.linkSize(SwingConstants.HORIZONTAL, show, close);
+//        frame.getContentPane().setLayout(layout);
+        ArrayList<String> CapAndPrice = new ArrayList<String>();
+
+        models[0] = new DefaultComboBoxModel(
+                new String[]{"Select a Memory Type"});
 
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(firstnameTextfield)
-                        .addComponent(lastnameTextfield)
-                        .addComponent(postcodeTextfield)
-                        .addComponent(emailTextfield)
-                        .addComponent(phoneTextfield))
+        capComboBox.setModel(models[0]);
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(show)
-                        .addComponent(close)).addComponent(saveDetailsButton));
-
-        layout.setVerticalGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
-                        .addComponent(typeComboBox))
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(capacityLabel)
-                        .addComponent(capComboBox))
-
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
-                        .addComponent(firstnameTextfield).addComponent(saveDetailsButton).addComponent(show))
-
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lastnameLabel)
-                        .addComponent(lastnameTextfield))
-
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(postcodeLabel)
-                        .addComponent(postcodeTextfield))
-
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(emailLabel)
-                        .addComponent(emailTextfield))
-
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(phoneLabel)
-                        .addComponent(phoneTextfield).addComponent(close)));
-
-
-        layout.linkSize(SwingConstants.HORIZONTAL, saveDetailsButton);
-        layout.linkSize(SwingConstants.HORIZONTAL, show, close);
-        frame.getContentPane().setLayout(layout);
+        this.add(typeComboBox);
+        this.add(capComboBox);
+        System.out.println();
+        typeComboBox.addActionListener(this);
     }
+
+//    public void dynamicCombo() {
+//
+//            models[0] = new DefaultComboBoxModel(
+//                    new String[]{"A1", "A2"});
+//            models[1] = new DefaultComboBoxModel(
+//                    new String[]{"B1", "B2", "B3", "B4"});
+//            models[2] = new DefaultComboBoxModel(
+//                    new String[]{"C1", "C2"});
+//
+//            capComboBox.setModel(models[0]);
+//
+//            this.add(typeComboBox);
+//            this.add(capComboBox);
+//            System.out.println();
+//            typeComboBox.addActionListener(this);
+//
+//    }
+
     public JFrame getFrame() {
         return frame;
     }
@@ -238,5 +289,91 @@ public class View {
 
     public void setPhoneTextfield(JTextField phoneTextfield) {
         this.phoneTextfield = phoneTextfield;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        int i = typeComboBox.getSelectedIndex();
+        ArrayList<String> contents = new ArrayList<String>();
+        try {
+            contents = memoryDatabase.getCapAndPrice((String) finalMemoryTypes.toArray()[i]);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        models[0] = new DefaultComboBoxModel(contents.toArray());
+
+        capComboBox.setModel(models[0]);
+    }
+
+    @Override
+    public void run() {
+        frame = new JFrame("Components Order System");
+        frame.getContentPane().setLayout(new BorderLayout());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 500);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+
+        postcodeLabel = new JLabel("Postcode :");
+        firstnameLabel = new JLabel("Firstname :");
+        lastnameLabel = new JLabel("Lastname :");
+        emailLabel = new JLabel("Email :");
+        phoneLabel = new JLabel("Phone :");
+        memoryTypeLabel = new JLabel("Memory Type :");
+        capacityLabel = new JLabel("Capacity and Price :");
+
+        GroupLayout layout = new GroupLayout(frame.getContentPane());
+        layout.setAutoCreateGaps(true);
+        layout.setAutoCreateContainerGaps(true);
+        layout.setHorizontalGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(memoryTypeLabel)
+                        .addComponent(capacityLabel)
+                        .addComponent(firstnameLabel)
+                        .addComponent(lastnameLabel)
+                        .addComponent(postcodeLabel)
+                        .addComponent(emailLabel)
+                        .addComponent(phoneLabel)
+                )
+
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(firstnameTextfield)
+                        .addComponent(lastnameTextfield)
+                        .addComponent(postcodeTextfield)
+                        .addComponent(emailTextfield)
+                        .addComponent(phoneTextfield))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(show)
+                        .addComponent(close)).addComponent(saveDetailsButton));
+
+        layout.setVerticalGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
+                        .addComponent(typeComboBox))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(capacityLabel)
+                        .addComponent(capComboBox))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
+                        .addComponent(firstnameTextfield).addComponent(saveDetailsButton).addComponent(show))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lastnameLabel)
+                        .addComponent(lastnameTextfield))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(postcodeLabel)
+                        .addComponent(postcodeTextfield))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(emailLabel)
+                        .addComponent(emailTextfield))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(phoneLabel)
+                        .addComponent(phoneTextfield).addComponent(close)));
+
+
+        layout.linkSize(SwingConstants.HORIZONTAL, saveDetailsButton);
+        layout.linkSize(SwingConstants.HORIZONTAL, show, close);
+        frame.getContentPane().setLayout(layout);
+
     }
 }
