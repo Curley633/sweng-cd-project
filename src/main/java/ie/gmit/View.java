@@ -1,6 +1,7 @@
 package ie.gmit;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class View {
@@ -35,7 +36,7 @@ public class View {
         lastnameLabel = new JLabel("Lastname :");
         emailLabel = new JLabel("Email :");
         phoneLabel = new JLabel("Phone :");
-        memoryTypeLabel =  new JLabel("Memory Type :");
+        memoryTypeLabel = new JLabel("Memory Type :");
 
         postcodeTextfield = new JTextField();
         firstnameTextfield = new JTextField();
@@ -43,9 +44,13 @@ public class View {
         emailTextfield = new JTextField();
         phoneTextfield = new JTextField();
 
-
-        String[] memoryTypes = { "SD", "SSD", "HDD", "RAM", "SHD"};
-        typeComboBox = new JComboBox(memoryTypes);
+        ArrayList<String> memoryTypes = new ArrayList<String>();
+        try {
+            memoryTypes = memoryDatabase.getMemTypes();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        typeComboBox = new JComboBox(memoryTypes.toArray());
 
         saveDetailsButton = new JButton("Save Details");
         show = new JButton("Show");
@@ -63,7 +68,7 @@ public class View {
                         .addComponent(postcodeLabel)
                         .addComponent(emailLabel)
                         .addComponent(phoneLabel)
-                        )
+                )
 
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -95,7 +100,6 @@ public class View {
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(phoneLabel)
                         .addComponent(phoneTextfield).addComponent(close)));
-
 
 
         layout.linkSize(SwingConstants.HORIZONTAL, saveDetailsButton);
