@@ -1,6 +1,7 @@
 package ie.gmit;
 
 import java.awt.BorderLayout;
+import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import javax.swing.*;
 
@@ -13,7 +14,9 @@ public class View {
     private JLabel emailLabel;
     private JLabel phoneLabel;
     private JLabel memoryTypeLabel;
+    private JLabel capacityLabel;
     private JComboBox typeComboBox;
+    private JComboBox capComboBox;
     private JTextField postcodeTextfield;
     private JTextField firstnameTextfield;
     private JTextField lastnameTextfield;
@@ -37,6 +40,7 @@ public class View {
         emailLabel = new JLabel("Email :");
         phoneLabel = new JLabel("Phone :");
         memoryTypeLabel = new JLabel("Memory Type :");
+        capacityLabel = new JLabel("Capacity and Price :");
 
         postcodeTextfield = new JTextField();
         firstnameTextfield = new JTextField();
@@ -51,7 +55,18 @@ public class View {
             System.out.println(e);
         }
         typeComboBox = new JComboBox(memoryTypes.toArray());
-
+//        typeComboBox.addItemListener(
+//            new ItemListener(){
+//                public void itemStateChanged()
+//            }
+//        )
+        ArrayList<String> capAndPrice = new ArrayList<String>();
+        try {
+            capAndPrice = memoryDatabase.getCapAndPrice((String) memoryTypes.toArray()[0]);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        capComboBox = new JComboBox(capAndPrice.toArray());
         saveDetailsButton = new JButton("Save Details");
         show = new JButton("Show");
         close = new JButton("Close");
@@ -63,6 +78,7 @@ public class View {
         layout.setHorizontalGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addComponent(memoryTypeLabel)
+                        .addComponent(capacityLabel)
                         .addComponent(firstnameLabel)
                         .addComponent(lastnameLabel)
                         .addComponent(postcodeLabel)
@@ -73,6 +89,7 @@ public class View {
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(firstnameTextfield)
                         .addComponent(lastnameTextfield)
                         .addComponent(postcodeTextfield)
@@ -85,6 +102,8 @@ public class View {
         layout.setVerticalGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
                         .addComponent(typeComboBox))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(capacityLabel)
+                        .addComponent(capComboBox))
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
                         .addComponent(firstnameTextfield).addComponent(saveDetailsButton).addComponent(show))
@@ -123,6 +142,12 @@ public class View {
     }
     public void setTypeComboBox(JComboBox typeComboBox) {
         this.typeComboBox = typeComboBox;
+    }
+    public JComboBox getCapacityComboBox() {
+        return capComboBox;
+    }
+    public void setCapacityComboBox(JComboBox capComboBox) {
+        this.capComboBox = capComboBox;
     }
     public JLabel getFirstnameLabel() {
         return firstnameLabel;
