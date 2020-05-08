@@ -1,10 +1,11 @@
 package ie.gmit;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class Controller {
     private Model model;
     private View view;
+
     public Controller(Model m, View v) {
         model = m;
         view = v;
@@ -16,6 +17,7 @@ public class Controller {
         view.getPostcodeTextfield().setText(model.getPostcode());
         view.getEmailTextfield().setText(model.getEmail());
         view.getPhoneTextfield().setText(model.getPhone());
+        //view.getTypeComboBox().setModel(model.getMemoryType());
     }
     public void initController() {
         view.getSaveDetailsButton().addActionListener(e -> saveDetails());
@@ -28,14 +30,15 @@ public class Controller {
         model.setPostcode(view.getPostcodeTextfield().getText());
         model.setEmail(view.getEmailTextfield().getText());
         model.setPhone(view.getPhoneTextfield().getText());
+        model.setMemoryType(view.getTypeComboBox().getModel());
         JOptionPane.showMessageDialog(null, "Details saved : " + "\n" + model.getFirstname()
                 + " " + model.getLastname() + "\n " + model.getPostcode()
-                + "\n " + model.getEmail() + "\n " + model.getPhone() , "Info", JOptionPane.INFORMATION_MESSAGE);
+                + "\n " + model.getEmail() + "\n " + model.getPhone() + "\n " + model.getMemoryType(), "Info", JOptionPane.INFORMATION_MESSAGE);
     }
     private void showDetails() {
         JOptionPane.showMessageDialog(null,  model.getFirstname() + "\n " + model.getLastname()
                 + "\n " + model.getPostcode() + "\n " + model.getEmail()
-                + "\n " + model.getPhone(), "Info", JOptionPane.INFORMATION_MESSAGE);
+                + "\n " + model.getPhone()  + "\n " + model.getMemoryType(), "Info", JOptionPane.INFORMATION_MESSAGE);
     }
     private void closeModal() {
         System.exit(0);
