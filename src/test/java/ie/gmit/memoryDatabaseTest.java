@@ -44,11 +44,11 @@ public class memoryDatabaseTest {
         assertEquals(correctMemoryTypeData, memoryDatabase.getMemTypes(), "Success getting memory types");
     }
     @Test
-    public void testGetCapacityAndPrice() {
+    public void testGetCapacityAndPrice() throws Exception {
         assertEquals(correctCapAndPriceData, memoryDatabase.getCapacityAndPrice("RAM"), "Success testing getCapacityAndPrice method");
     }
     @Test
-    public void testGetCapacityAndPriceException() {
+    public void testGetCapacityAndPriceException() throws Exception {
         assertEquals(incorrectCapAndPriceData, memoryDatabase.getCapacityAndPrice(""), "Success testing getCapacityAndPrice Exception");
     }
 
