@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sweng-cd-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/META-INF/main.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/View$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/memoryDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ie/gmit/memoryDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
@@ -38,6 +44,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - GMIT/5th Year/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar!/" />
@@ -58,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ModelTest">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.gmit.GUI" />
       <module name="main" />
@@ -85,8 +92,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.gmit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.gmit" />
+      <option name="MAIN_CLASS_NAME" value="ie.gmit.ModelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="memoryDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.gmit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.gmit" />
+      <option name="MAIN_CLASS_NAME" value="ie.gmit.memoryDatabaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ModelTest" />
+        <item itemvalue="JUnit.memoryDatabaseTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.GUI" />
       </list>
@@ -97,14 +136,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="af31cb7b-b5ea-4db3-839e-6616dcf58196" name="Default Changelist" comment="" />
+      <changelist id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="" />
       <created>1588946645147</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588946645147</updated>
       <workItem from="1588946646900" duration="83000" />
       <workItem from="1588946761401" duration="14099000" />
+      <workItem from="1589033750869" duration="1217000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
+      <created>1588971912162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588971912162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

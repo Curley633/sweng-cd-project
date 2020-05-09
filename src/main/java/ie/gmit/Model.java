@@ -4,12 +4,8 @@ import javax.swing.*;
 
 public class Model {
 
-
-    private String postcode;
     private String firstname;
     private String lastname;
-    private String email;
-    private String phone;
     private ComboBoxModel memoryType;
 
     public Model() {
@@ -24,6 +20,7 @@ public class Model {
             this.lastname = lastname;
         }
     }
+
     public String getFirstname() {
         return firstname;
     }
@@ -36,24 +33,6 @@ public class Model {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-//    public String getPostcode() {
-//        return postcode;
-//    }
-//    public void setPostcode(String postcode) {
-//        this.postcode = postcode;
-//    }
-//    public String getEmail() {
-//        return email;
-//    }
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
-//    public String getPhone() {
-//        return phone;
-//    }
-//    public void setPhone(String phone) {
-//        this.phone = phone;
-//    }
 
     public ComboBoxModel getMemoryType() {
         return memoryType;
