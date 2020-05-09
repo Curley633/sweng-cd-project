@@ -41,6 +41,7 @@ public class Model {
     public void setMemoryType(String memoryType) {
         this.memoryType = memoryType;
     }
+
     public String getCapacityAndPrice() {
         return capacityAndPrice;
     }

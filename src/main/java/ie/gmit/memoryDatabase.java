@@ -13,7 +13,7 @@ public class memoryDatabase {
 
     public static String getConnection() {
         try {
-            String driver = "com.mysql.jdbc.Driver";
+            String driver = "com.mysql.cj.jdbc.Driver";
             String url = "jdbc:mysql://206.189.29.193:3306/swt?useSSL=false";
             String username = "memoryDB";
             String password = "KitchenCompanion5*";
