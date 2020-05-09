@@ -12,16 +12,25 @@ public class ModelTest {
     {
         thisModel = new Model();
     }
+
+    @Test
+    void testConstructorNoName()
+    {
+        assertThrows(IllegalArgumentException.class, () -> new Model("",""));
+    }
+
     @Test
     void testConstructorNoFirstName()
     {
         assertThrows(IllegalArgumentException.class, () -> new Model("","meskal"));
     }
+
     @Test
     void testConstructorNoLastName()
     {
         assertThrows(IllegalArgumentException.class, () -> new Model("john",""));
     }
+
     @Test
     void testConstructor() {
         thisModel = new Model("john", "meskal");

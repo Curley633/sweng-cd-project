@@ -142,7 +142,7 @@ public class View extends JPanel implements ActionListener, Runnable {
         int i = typeComboBox.getSelectedIndex();
 
         try {
-            capAndPrice = memoryDatabase.getCapAndPrice((String) finalMemoryTypes.toArray()[i]);
+            capAndPrice = memoryDatabase.getCapacityAndPrice((String) finalMemoryTypes.toArray()[i]);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

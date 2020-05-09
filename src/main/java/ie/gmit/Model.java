@@ -13,7 +13,7 @@ public class Model {
     }
 
     public Model(String firstname, String lastname) {
-        if(firstname == "" || lastname == "" ) {
+        if(firstname == "" || lastname == "" || (firstname == "" && lastname == "")) {
             throw new IllegalArgumentException("Field Cannot Be Empty");
         } else {
             this.firstname = firstname;

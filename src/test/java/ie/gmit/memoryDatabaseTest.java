@@ -1,24 +1,63 @@
 package ie.gmit;
 
 import org.junit.jupiter.api.*;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class memoryDatabaseTest {
     memoryDatabase thisMemoryDatabase;
+    List<String> correctMemoryTypeData = Arrays.asList("SSD", "HDD", "RAM", "SD", "SHD");
+    //    List<String> incorrectMemoryTypeData = Arrays.asList("DSS", "DDH", "MAR");
+    List<String> correctCapAndPriceData = Arrays.asList("8GB €" + 60);
+    ArrayList<String> incorrectCapAndPriceData = new ArrayList();
+
 
     @BeforeEach
-    void init()
+    public void init()
     {
         thisMemoryDatabase = new memoryDatabase();
     }
     @Test
-    void testDecrementQuantityPositive()
-    {
-        assertEquals(1, memoryDatabase.decrementQuantity("HDD", 3000));
+    public void testGetConnection() {
+//        Exception exception = assertThrows(Exception.class, () -> {
+//            memoryDatabase.getConnection();
+//        });
+        assertEquals("Connected to Database", memoryDatabase.getConnection());
     }
     @Test
-    void testDecrementQuantityNegative()
+    public void testDecrementQuantityPositive()
     {
-        assertEquals(0, memoryDatabase.decrementQuantity("HDD", 2000));
+        assertEquals(1, memoryDatabase.decrementQuantity(1));
     }
+    @Test
+    public void testDecrementQuantityNegative()
+    {
+        assertEquals(0, memoryDatabase.decrementQuantity(0));
+    }
+    @Test
+    public void testGetMemoryTypes() {
+        assertEquals(correctMemoryTypeData, memoryDatabase.getMemTypes(), "Success getting memory types");
+    }
+    @Test
+    public void testGetCapacityAndPrice() {
+        assertEquals(correctCapAndPriceData, memoryDatabase.getCapacityAndPrice("RAM"), "Success testing getCapacityAndPrice method");
+    }
+    @Test
+    public void testGetCapacityAndPriceException() {
+        assertEquals(incorrectCapAndPriceData, memoryDatabase.getCapacityAndPrice(""), "Success testing getCapacityAndPrice Exception");
+    }
+
+//    @Test(expected = Exception.class)
+//    public void testGetMemoryTypesException() {
+//        assertEquals(incorrectMemoryTypeData, memoryDatabase.getMemTypes());
+//    }
+//    @Test
+//    void testGetConnection() {
+//
+//    }
 }
