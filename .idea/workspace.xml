@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" beforeDir="false" />
@@ -9,8 +13,15 @@
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/memoryDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/test/ie/gmit/ModelTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/test/ie/gmit/ViewTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/test/ie/gmit/memoryDatabaseTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweng-cd-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sweng-cd-project.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +51,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - GMIT/5th Year/Software Engineering/Counter" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - GMIT/5th Year/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.4597701" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
@@ -58,10 +69,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.memoryDatabaseTest">
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ie.gmit.GUI" />
-      <module name="main" />
+  <component name="RunManager" selected="JUnit.ModelTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ie.gmit.Main" />
+      <module name="sweng-cd-project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ie.gmit.*" />
@@ -72,21 +83,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ie.gmit.Main" />
-      <module name="main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.gmit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="All in test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
+      <module name="sweng-cd-project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ie.gmit.*" />
@@ -95,12 +101,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="ie.gmit" />
       <option name="MAIN_CLASS_NAME" value="ie.gmit.ModelTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="memoryDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ie.gmit in test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -109,18 +117,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.gmit" />
-      <option name="MAIN_CLASS_NAME" value="ie.gmit.memoryDatabaseTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="memoryDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sweng-cd-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.gmit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.gmit" />
+      <option name="MAIN_CLASS_NAME" value="ie.gmit.memoryDatabaseTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.memoryDatabaseTest" />
+      <item itemvalue="JUnit.ModelTest" />
+      <item itemvalue="JUnit.All in test" />
+      <item itemvalue="JUnit.ie.gmit in test" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.memoryDatabaseTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ModelTest" />
-        <item itemvalue="Application.GUI" />
+        <item itemvalue="JUnit.memoryDatabaseTest" />
+        <item itemvalue="JUnit.ie.gmit in test" />
+        <item itemvalue="JUnit.All in test" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +168,8 @@
       <updated>1588946645147</updated>
       <workItem from="1588946646900" duration="83000" />
       <workItem from="1588946761401" duration="14099000" />
-      <workItem from="1589033750869" duration="6914000" />
+      <workItem from="1589033750869" duration="7927000" />
+      <workItem from="1589042663881" duration="2566000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>

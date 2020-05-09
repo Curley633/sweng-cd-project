@@ -16,7 +16,6 @@ public class memoryDatabaseTest {
     List<String> correctCapAndPriceData = Arrays.asList("8GB €" + 60);
     ArrayList<String> incorrectCapAndPriceData = new ArrayList();
 
-
     @BeforeEach
     public void init()
     {

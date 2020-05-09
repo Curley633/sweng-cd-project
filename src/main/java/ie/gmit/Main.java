@@ -1,7 +1,6 @@
 package ie.gmit;
 
 import ie.gmit.Controller;
-
 import java.awt.*;
 
 public class Main {
