@@ -7,11 +7,11 @@ import java.awt.*;
 public class Main {
     public static void main(String[] args) {
         // Assemble all the pieces of the MVC
-        Model m = new Model("john", "meskal");
+        Model m = new Model("John", "Appleseed");
 
-        //View v = new View("Details");
-        EventQueue.invokeLater(new View("Test"));
-        //Controller c = new Controller(m, v);
-        //c.initController();
+        View v ;
+        EventQueue.invokeLater(v = new View("Details"));
+        Controller c = new Controller(m, v);
+        c.initController();
     }
 }

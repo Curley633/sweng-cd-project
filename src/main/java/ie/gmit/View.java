@@ -25,13 +25,13 @@ public class View extends JPanel implements ActionListener, Runnable {
     private JTextField lastnameTextfield;
 
     private JButton confirmOrderButton;
+    private JButton show;
     private JButton close;
 
     ArrayList<String> finalMemoryTypes;
     ArrayList<String> capAndPrice = new ArrayList<String>();
 
     public View(String title) {
-
         firstnameTextfield = new JTextField();
         lastnameTextfield = new JTextField();
 
@@ -42,12 +42,13 @@ public class View extends JPanel implements ActionListener, Runnable {
         } catch (Exception e) {
             System.out.println(e);
         }
+
         typeComboBox = new JComboBox(memoryTypes.toArray());
         finalMemoryTypes = memoryTypes;
         capComboBox = new JComboBox();
         models = new ComboBoxModel[1];
         confirmOrderButton = new JButton("Confirm Order");
-
+        show = new JButton("Show");
         close = new JButton("Close");
 
 
@@ -55,6 +56,7 @@ public class View extends JPanel implements ActionListener, Runnable {
 
         models[0] = new DefaultComboBoxModel(
                 new String[]{"Select a Memory Type"});
+
 
         capComboBox.setModel(models[0]);
 
@@ -64,14 +66,14 @@ public class View extends JPanel implements ActionListener, Runnable {
         typeComboBox.addActionListener(this);
 
         capComboBox.addItemListener(
-            new ItemListener(){
+                new ItemListener(){
                     public void itemStateChanged(ItemEvent event){
                         if(event.getStateChange() == ItemEvent.SELECTED){
                             type[0] = (String) capAndPrice.toArray()[capComboBox.getSelectedIndex()];
                             System.out.println(type[0]);
                         }
+                    }
                 }
-            }
         );
     }
 

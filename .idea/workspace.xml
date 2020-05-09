@@ -41,7 +41,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - GMIT/5th Year/Software Engineering/Counter" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -58,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ModelTest">
+  <component name="RunManager" selected="JUnit.memoryDatabaseTest">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.gmit.GUI" />
       <module name="main" />
@@ -117,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ModelTest" />
         <item itemvalue="JUnit.memoryDatabaseTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ModelTest" />
         <item itemvalue="Application.GUI" />
       </list>
     </recent_temporary>
@@ -136,7 +136,7 @@
       <updated>1588946645147</updated>
       <workItem from="1588946646900" duration="83000" />
       <workItem from="1588946761401" duration="14099000" />
-      <workItem from="1589033750869" duration="3833000" />
+      <workItem from="1589033750869" duration="6914000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>
@@ -177,5 +177,10 @@
     <MESSAGE value="Fixed Code and got rid of unwanted variables" />
     <MESSAGE value="Edited code" />
     <option name="LAST_COMMIT_MESSAGE" value="Edited code" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sweng_cd_project$memoryDatabaseTest.ic" NAME="memoryDatabaseTest Coverage Results" MODIFIED="1589041595788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ie.gmit.*</FILTER>
+    </SUITE>
   </component>
 </project>

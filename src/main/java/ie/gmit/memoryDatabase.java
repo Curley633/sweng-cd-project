@@ -4,11 +4,12 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class memoryDatabase {
-
     private static Connection connection;
     private static PreparedStatement getMemoryTypesStatement;
-    private static PreparedStatement capacityAndPriceStatement;
+    private static PreparedStatement productIDStatement;
     private static PreparedStatement decrementQuantityStatement;
+    private static PreparedStatement capacityAndPriceStatement;
+    private static PreparedStatement brandStatement;
 
     public static String getConnection() {
         try {
@@ -19,6 +20,7 @@ public class memoryDatabase {
             Class.forName(driver);
             connection = DriverManager.getConnection(url,username,password);
             return "Connected to Database";
+
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println(e);
         }
@@ -34,7 +36,7 @@ public class memoryDatabase {
             getMemoryTypesStatement = connection.prepareStatement("SELECT memorytype from MemoryStock WHERE quantity > 0");
             ResultSet result = getMemoryTypesStatement.executeQuery();
 
-            ArrayList<String> array = new ArrayList<>();
+            ArrayList<String> array = new ArrayList<String>();
             String memoryType;
             while(result.next()){
 
@@ -52,17 +54,45 @@ public class memoryDatabase {
         }
         return null;
     }
+    public static int  getProductID(String memType, int index){
+        ArrayList<Integer> array = new ArrayList<Integer>();
+
+        try{
+            System.out.println("In getProductID");
+            getConnection();
+            System.out.println("After getConnection Called");
+
+            productIDStatement = connection.prepareStatement("SELECT productID from MemoryStock WHERE memorytype = '" + memType +"' AND quantity > 0");
+            ResultSet result = productIDStatement.executeQuery();
+            int ID;
+            while(result.next()){
+
+                ID = result.getInt("productID");
+                array.add(ID);
+            }
+        }catch(Exception e) {
+            System.out.println(e);
+        }
+        System.out.println(array.get(index));
+        int prodID = array.get(index);
+        return prodID;
+    }
 
     public static int decrementQuantity(int productID) {
         int result = 0;
         try {
+            System.out.println("In decrementQuantity");
             getConnection();
+            System.out.println("After getConnection Called");
+
             decrementQuantityStatement = connection.prepareStatement("UPDATE MemoryStock SET quantity = quantity - 1 WHERE productID = '"
                     + productID + "' AND quantity > 0");
             result = decrementQuantityStatement.executeUpdate();
+
             if(result == 0) {
                 System.out.println("No Units Available");
             }
+
             System.out.println("Decrement Result: " + result);
         } catch (Exception e) {
             System.out.println("Decrement Quantity Error: " + e);
@@ -70,29 +100,56 @@ public class memoryDatabase {
         return result;
     }
 
-    public static ArrayList<String> getCapacityAndPrice(String memtypes) {
-        ResultSet result;
-        ArrayList<String> array = new ArrayList<String>();;
+    public static ArrayList<String> getCapacityAndPrice(String memtypes) throws Exception{
         try{
+            System.out.println("In getCapacityAndPrice");
             getConnection();
+            System.out.println("After getConnection Called");
+
             capacityAndPriceStatement = connection.prepareStatement("SELECT capacity, price from MemoryStock WHERE memorytype = '"+ memtypes +"' AND quantity > 0" );
 
-            result = capacityAndPriceStatement.executeQuery();
+            ResultSet result = capacityAndPriceStatement.executeQuery();
+
+            ArrayList<String> array = new ArrayList<String>();
             String capAndPrice;
             while(result.next()){
+
                 capAndPrice = result.getString("capacity") + "GB €" + result.getString("price");
+
                 array.add(capAndPrice);
+
             }
             System.out.println("All Memory Types have been Selected!");
             System.out.println(array);
             return array;
-        } catch (Exception e){
-            System.out.println("ERROR getting Cap and Price:" + e);
         }
-        return array;
+        catch (Exception e){
+            System.out.println(e);
+        }
+        return null;
     }
+    public static String getBrand(int productID) throws Exception{
+        String brand = "";
+        try{
+            System.out.println("In getBrand");
+            getConnection();
+            System.out.println("After getConnection Called");
 
-    public static void makeOrder(String memType, String capacity) {
+            brandStatement = connection.prepareStatement("SELECT brand from MemoryStock WHERE productID = '"+ productID+"' AND quantity > 0" );
 
+            ResultSet result = brandStatement.executeQuery();
+
+            while(result.next()){
+
+                brand = result.getString("brand");
+            }
+
+            System.out.println(brand);
+            return brand;
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        return null;
     }
 }
