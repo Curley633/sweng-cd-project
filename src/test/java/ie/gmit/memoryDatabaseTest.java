@@ -13,7 +13,7 @@ public class memoryDatabaseTest {
     memoryDatabase thisMemoryDatabase;
     List<String> correctMemoryTypeData = Arrays.asList("SSD", "HDD", "RAM", "SD", "SHD");
     //    List<String> incorrectMemoryTypeData = Arrays.asList("DSS", "DDH", "MAR");
-    List<String> correctCapAndPriceData = Arrays.asList("8GB €" + 60);
+    List<String> correctCapAndPriceData = Arrays.asList("8GB €" + 60.0);
     ArrayList<String> incorrectCapAndPriceData = new ArrayList();
 
     @BeforeEach

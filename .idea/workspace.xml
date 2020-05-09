@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_20.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/ie/gmit/memoryDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/test/ie/gmit/ModelTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/test/ie/gmit/ViewTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/test/ie/gmit/memoryDatabaseTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweng-cd-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sweng-cd-project.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ModelTest">
+  <component name="RunManager" selected="JUnit.memoryDatabaseTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.gmit.Main" />
       <module name="sweng-cd-project" />
@@ -148,8 +135,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ModelTest" />
         <item itemvalue="JUnit.memoryDatabaseTest" />
+        <item itemvalue="JUnit.ModelTest" />
         <item itemvalue="JUnit.ie.gmit in test" />
         <item itemvalue="JUnit.All in test" />
         <item itemvalue="Application.Main" />
@@ -169,7 +156,7 @@
       <workItem from="1588946646900" duration="83000" />
       <workItem from="1588946761401" duration="14099000" />
       <workItem from="1589033750869" duration="7927000" />
-      <workItem from="1589042663881" duration="2566000" />
+      <workItem from="1589042663881" duration="3696000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>
@@ -185,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589035378597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed file configurations for the project">
+      <created>1589045575468</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589045575468</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +203,8 @@
     <MESSAGE value="Stash 2" />
     <MESSAGE value="Fixed Code and got rid of unwanted variables" />
     <MESSAGE value="Edited code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited code" />
+    <MESSAGE value="fixed file configurations for the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed file configurations for the project" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweng_cd_project$memoryDatabaseTest.ic" NAME="memoryDatabaseTest Coverage Results" MODIFIED="1589041595788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
