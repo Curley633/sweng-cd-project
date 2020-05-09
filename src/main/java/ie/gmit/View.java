@@ -11,34 +11,29 @@ import java.util.ArrayList;
 public class View extends JPanel implements ActionListener, Runnable {
     // View uses Swing framework to display UI to user
     private JFrame frame;
-    private JLabel postcodeLabel;
+
     private JLabel firstnameLabel;
     private JLabel lastnameLabel;
-    private JLabel emailLabel;
-    private JLabel phoneLabel;
     private JLabel memoryTypeLabel;
     private JLabel capacityLabel;
+
     private JComboBox typeComboBox;
     private JComboBox capComboBox;
     private ComboBoxModel[] models;
-    private JTextField postcodeTextfield;
+
     private JTextField firstnameTextfield;
     private JTextField lastnameTextfield;
-    private JTextField emailTextfield;
-    private JTextField phoneTextfield;
+
     private JButton confirmOrderButton;
-    private JButton show;
     private JButton close;
 
     ArrayList<String> finalMemoryTypes;
     ArrayList<String> capAndPrice = new ArrayList<String>();
 
     public View(String title) {
-        postcodeTextfield = new JTextField();
+
         firstnameTextfield = new JTextField();
         lastnameTextfield = new JTextField();
-        emailTextfield = new JTextField();
-        phoneTextfield = new JTextField();
 
         final String[] type = new String[1];
         ArrayList<String> memoryTypes = new ArrayList<String>();
@@ -52,7 +47,7 @@ public class View extends JPanel implements ActionListener, Runnable {
         capComboBox = new JComboBox();
         models = new ComboBoxModel[1];
         confirmOrderButton = new JButton("Confirm Order");
-        show = new JButton("Show");
+
         close = new JButton("Close");
 
 
@@ -60,7 +55,6 @@ public class View extends JPanel implements ActionListener, Runnable {
 
         models[0] = new DefaultComboBoxModel(
                 new String[]{"Select a Memory Type"});
-
 
         capComboBox.setModel(models[0]);
 
@@ -135,12 +129,7 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setConfirmOrderButton(JButton confirmOrderButton) {
         this.confirmOrderButton = confirmOrderButton;
     }
-    public JButton showDetails() {
-        return show;
-    }
-    public void setShowDetails(JButton details) {
-        this.show = details;
-    }
+
     public JButton getClose() {
         return close;
     }

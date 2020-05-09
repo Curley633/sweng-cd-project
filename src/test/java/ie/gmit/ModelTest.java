@@ -15,18 +15,18 @@ public class ModelTest {
     @Test
     void testConstructorNoFirstName()
     {
-        assertThrows(IllegalArgumentException.class, () -> new Model("","curley"));
+        assertThrows(IllegalArgumentException.class, () -> new Model("","meskal"));
     }
     @Test
     void testConstructorNoLastName()
     {
-        assertThrows(IllegalArgumentException.class, () -> new Model("james",""));
+        assertThrows(IllegalArgumentException.class, () -> new Model("john",""));
     }
     @Test
     void testConstructor() {
-        thisModel = new Model("james", "curley");
-        assertEquals("james", thisModel.getFirstname());
-        assertEquals("curley", thisModel.getLastname());
+        thisModel = new Model("john", "meskal");
+        assertEquals("john", thisModel.getFirstname());
+        assertEquals("meskal", thisModel.getLastname());
     }
 }
 

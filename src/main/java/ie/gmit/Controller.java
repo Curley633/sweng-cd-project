@@ -14,12 +14,13 @@ public class Controller {
     public void initView() {
         view.getFirstnameTextfield().setText(model.getFirstname());
         view.getLastnameTextfield().setText(model.getLastname());
-
     }
+
     public void initController() {
         view.getConfirmOrderButton().addActionListener(e -> confirmOrder());
         view.getClose().addActionListener(e -> closeModal());
     }
+
     private void confirmOrder() {
         model.setFirstname(view.getFirstnameTextfield().getText());
         model.setLastname(view.getLastnameTextfield().getText());
