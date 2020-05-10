@@ -41,7 +41,7 @@ public class Controller {
         model.setBrand(brand);
 
         JOptionPane.showMessageDialog(null, "Thank you : " + "\n" + model.getFirstname()
-                + " " + model.getLastname()  + "!\n\nOrder Info: " + model.getBrand() + "\n\t" + model.getMemoryType() + "\n\t" + model.getCapacityAndPrice(), "Info", JOptionPane.INFORMATION_MESSAGE);
+                + " " + model.getLastname()  + "!\n\nOrder Info: \n" + model.getBrand() + "\n\t" + model.getMemoryType() + "\n\t" + model.getCapacityAndPrice(), "Info", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private void closeModal() {

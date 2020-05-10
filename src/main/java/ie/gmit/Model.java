@@ -1,14 +1,12 @@
 package ie.gmit;
 
-import javax.swing.*;
-
 public class Model {
 
     private String firstname;
     private String lastname;
-    private String brand;
     private String memoryType;
     private String capacityAndPrice;
+    private String brand;
 
     public Model() {
 
@@ -25,38 +23,46 @@ public class Model {
     public String getFirstname() {
         return firstname;
     }
-    public void setFirstname(String firstname) {
+
+    public String setFirstname(String firstname) {
         this.firstname = firstname;
+        return firstname;
     }
+
     public String getLastname() {
         return lastname;
     }
-    public void setLastname(String lastname) {
+
+    public String setLastname(String lastname) {
         this.lastname = lastname;
+        return lastname;
     }
+
     public String getMemoryType() {
         return memoryType;
     }
 
-    public void setMemoryType(String memoryType) {
+    public String setMemoryType(String memoryType) {
         this.memoryType = memoryType;
+        return memoryType;
     }
 
     public String getCapacityAndPrice() {
         return capacityAndPrice;
     }
 
-    public void setCapacityAndPrice(String capacityAndPrice) {
+    public String  setCapacityAndPrice(String capacityAndPrice) {
         this.capacityAndPrice = capacityAndPrice;
+        return  capacityAndPrice;
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public String setBrand(String brand) {
         this.brand = brand;
+        return brand;
     }
-
-
+    
 }
