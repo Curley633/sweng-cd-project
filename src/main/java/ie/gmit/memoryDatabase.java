@@ -58,15 +58,11 @@ public class memoryDatabase {
         ArrayList<Integer> array = new ArrayList<Integer>();
 
         try{
-            System.out.println("In getProductID");
             getConnection();
-            System.out.println("After getConnection Called");
-
             productIDStatement = connection.prepareStatement("SELECT productID from MemoryStock WHERE memorytype = '" + memType +"' AND quantity > 0");
             ResultSet result = productIDStatement.executeQuery();
             int ID;
             while(result.next()){
-
                 ID = result.getInt("productID");
                 array.add(ID);
             }
@@ -75,7 +71,12 @@ public class memoryDatabase {
         }
         System.out.println(array.get(index));
         int prodID = array.get(index);
-        return prodID;
+        if(prodID > 0) {
+            System.out.println("Prod ID:" + prodID);
+            return prodID;
+        } else {
+            throw new IllegalArgumentException("No product Id for this Item");
+        }
     }
 
     public static int decrementQuantity(int productID) {
@@ -100,26 +101,22 @@ public class memoryDatabase {
         return result;
     }
 
-    public static ArrayList<String> getCapacityAndPrice(String memtypes) throws Exception{
+    public static ArrayList<String> getCapacityAndPrice(String selectedMemoryType) throws Exception{
         try{
             System.out.println("In getCapacityAndPrice");
             getConnection();
             System.out.println("After getConnection Called");
 
-            capacityAndPriceStatement = connection.prepareStatement("SELECT capacity, price from MemoryStock WHERE memorytype = '"+ memtypes +"' AND quantity > 0" );
+            capacityAndPriceStatement = connection.prepareStatement("SELECT capacity, price from MemoryStock WHERE memorytype = '"+ selectedMemoryType +"' AND quantity > 0" );
 
             ResultSet result = capacityAndPriceStatement.executeQuery();
 
             ArrayList<String> array = new ArrayList<String>();
             String capAndPrice;
             while(result.next()){
-
                 capAndPrice = result.getString("capacity") + "GB €" + result.getString("price");
-
                 array.add(capAndPrice);
-
             }
-            System.out.println("All Memory Types have been Selected!");
             System.out.println(array);
             return array;
         }
