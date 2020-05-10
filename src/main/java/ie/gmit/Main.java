@@ -1,16 +1,13 @@
 package ie.gmit;
-
-import ie.gmit.Controller;
 import java.awt.*;
-
 public class Main {
     public static void main(String[] args) {
-        // Assemble all the pieces of the MVC
         Model m = new Model("John", "Appleseed");
-
+        AdditionalCosts a = new AdditionalCosts();
+//        a.addVAT( 49.99);
         View v ;
         EventQueue.invokeLater(v = new View("Details"));
         Controller c = new Controller(m, v);
-        c.initController();
+        c.initButtons();
     }
 }

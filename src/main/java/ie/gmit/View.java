@@ -16,6 +16,9 @@ public class View extends JPanel implements ActionListener, Runnable {
     private JLabel lastnameLabel;
     private JLabel memoryTypeLabel;
     private JLabel capacityLabel;
+    private JLabel countryLabel;
+    private JLabel detailsLabel;
+    private JLabel qtyLabel;
 
     private JComboBox typeComboBox;
     private JComboBox capComboBox;
@@ -23,6 +26,8 @@ public class View extends JPanel implements ActionListener, Runnable {
 
     private JTextField firstnameTextfield;
     private JTextField lastnameTextfield;
+    private JTextField deliveryCountryTextfield;
+    private JTextField qtyTextfield;
 
     private JButton confirmOrderButton;
     private JButton show;
@@ -34,6 +39,8 @@ public class View extends JPanel implements ActionListener, Runnable {
     public View(String title) {
         firstnameTextfield = new JTextField();
         lastnameTextfield = new JTextField();
+        deliveryCountryTextfield = new JTextField();
+        qtyTextfield = new JTextField();
 
         final String[] type = new String[1];
         ArrayList<String> memoryTypes = new ArrayList<String>();
@@ -47,22 +54,22 @@ public class View extends JPanel implements ActionListener, Runnable {
         finalMemoryTypes = memoryTypes;
         capComboBox = new JComboBox();
         models = new ComboBoxModel[1];
+
         confirmOrderButton = new JButton("Confirm Order");
         show = new JButton("Show");
         close = new JButton("Close");
-
 
         ArrayList<String> CapAndPrice = new ArrayList<String>();
 
         models[0] = new DefaultComboBoxModel(
                 new String[]{"Select a Memory Type"});
 
-
         capComboBox.setModel(models[0]);
 
         this.add(typeComboBox);
         this.add(capComboBox);
         System.out.println();
+
         typeComboBox.addActionListener(this);
 
         capComboBox.addItemListener(
@@ -107,11 +114,11 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setFirstnameLabel(JLabel firstnameLabel) {
         this.firstnameLabel = firstnameLabel;
     }
-    public JLabel getLastnameLabel() {
-        return lastnameLabel;
+    public JLabel getCountryLabel() {
+        return countryLabel;
     }
-    public void setLastnameLabel(JLabel lastnameLabel) {
-        this.lastnameLabel = lastnameLabel;
+    public void setCountryLabel(JLabel countryLabel) {
+        this.countryLabel = countryLabel;
     }
     public JTextField getFirstnameTextfield() {
         return firstnameTextfield;
@@ -125,13 +132,18 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setLastnameTextfield(JTextField lastnameTextfield) {
         this.lastnameTextfield = lastnameTextfield;
     }
+    public JTextField getDeliveryCountryTextfield() {
+        return deliveryCountryTextfield;
+    }
+    public void setDeliveryCountryTextfield(JTextField deliveryCountryTextfield) {
+        this.deliveryCountryTextfield = deliveryCountryTextfield;
+    }
     public JButton getConfirmOrderButton() {
         return confirmOrderButton;
     }
     public void setConfirmOrderButton(JButton confirmOrderButton) {
         this.confirmOrderButton = confirmOrderButton;
     }
-
     public JButton getClose() {
         return close;
     }
@@ -159,14 +171,17 @@ public class View extends JPanel implements ActionListener, Runnable {
         frame = new JFrame("Components Order System");
         frame.getContentPane().setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 250);
+        frame.setSize(600, 230);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
         firstnameLabel = new JLabel("Firstname :");
         lastnameLabel = new JLabel("Lastname :");
+        countryLabel = new JLabel("Delivery Country :");
+        detailsLabel = new JLabel("(IRE & UK only)");
         memoryTypeLabel = new JLabel("Memory Type :");
         capacityLabel = new JLabel("Capacity and Price :");
+        qtyLabel = new JLabel("Quantity :");
 
         GroupLayout layout = new GroupLayout(frame.getContentPane());
         layout.setAutoCreateGaps(true);
@@ -175,30 +190,43 @@ public class View extends JPanel implements ActionListener, Runnable {
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addComponent(firstnameLabel)
                         .addComponent(lastnameLabel)
+                        .addComponent(countryLabel)
                         .addComponent(memoryTypeLabel)
-                        .addComponent(capacityLabel))
+                        .addComponent(capacityLabel)
+                        .addComponent(qtyLabel))
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addComponent(firstnameTextfield)
                         .addComponent(lastnameTextfield)
-                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(deliveryCountryTextfield)
+                        .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(qtyTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(close)).addComponent(confirmOrderButton));
+                        .addComponent(detailsLabel)
+                        .addComponent(close))
+                        .addComponent(confirmOrderButton));
 
         layout.setVerticalGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
-                        .addComponent(firstnameTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(firstnameLabel).addComponent(firstnameTextfield))
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lastnameLabel)
-                        .addComponent(lastnameTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(lastnameLabel).addComponent(lastnameTextfield))
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(memoryTypeLabel)
-                        .addComponent(typeComboBox))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(countryLabel).addComponent(deliveryCountryTextfield).addComponent(detailsLabel))
 
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(capacityLabel)
-                        .addComponent(capComboBox).addComponent(close).addComponent(confirmOrderButton))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(memoryTypeLabel).addComponent(typeComboBox))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(capacityLabel).addComponent(capComboBox))
+
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(qtyLabel).addComponent(qtyTextfield)
+                        .addComponent(close).addComponent(confirmOrderButton))
 
         );
 

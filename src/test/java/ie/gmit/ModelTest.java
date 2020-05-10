@@ -68,6 +68,12 @@ public class ModelTest {
         assertEquals("Samsung", thisModel.setBrand("Samsung"));
         assertEquals("Samsung", thisModel.getBrand(), "Success getting brand name after it has been set");
     }
+    @DisplayName("Testing getCountry")
+    @Test
+    public void testGetCountry() {
+        assertEquals("IRE", thisModel.setCountry("IRE"));
+        assertEquals("IRE", thisModel.getCountry(), "Success getting delivery country after it has been set");
+    }
 
 }
 
