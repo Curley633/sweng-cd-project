@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/AdditionalCosts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/AdditionalCostsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ViewTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,9 +135,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JUnit.memoryDatabaseTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ModelTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.memoryDatabaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +155,7 @@
       <workItem from="1588946761401" duration="14099000" />
       <workItem from="1589033750869" duration="7927000" />
       <workItem from="1589042663881" duration="5796000" />
-      <workItem from="1589048930728" duration="12470000" />
+      <workItem from="1589048930728" duration="22536000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>
@@ -186,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589118484118</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="James has memoryDatabaseTest completed with 85% coverage, we cant test negative values as havent setup a mock database">
+      <created>1589121515150</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589121515150</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +226,8 @@
     <MESSAGE value="fixed file configurations for the project" />
     <MESSAGE value="All configurations fixed and fixed the test errors in maven" />
     <MESSAGE value="ModelTest Tests completed with 100% coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="ModelTest Tests completed with 100% coverage" />
+    <MESSAGE value="James has memoryDatabaseTest completed with 85% coverage, we cant test negative values as havent setup a mock database" />
+    <option name="LAST_COMMIT_MESSAGE" value="James has memoryDatabaseTest completed with 85% coverage, we cant test negative values as havent setup a mock database" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweng_cd_project$memoryDatabaseTest.ic" NAME="memoryDatabaseTest Coverage Results" MODIFIED="1589041595788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
