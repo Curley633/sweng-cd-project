@@ -2,19 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_20.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweng-cd-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sweng-cd-project.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="225" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - GMIT/5th Year/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4597701" />
@@ -56,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.memoryDatabaseTest">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.gmit.Main" />
       <module name="sweng-cd-project" />
@@ -66,14 +81,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,20 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ie.gmit in test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.gmit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.gmit" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="memoryDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweng-cd-project" />
       <extension name="coverage">
@@ -126,20 +119,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sweng-cd-project/target/site/jacoco/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.memoryDatabaseTest" />
       <item itemvalue="JUnit.ModelTest" />
-      <item itemvalue="JUnit.All in test" />
-      <item itemvalue="JUnit.ie.gmit in test" />
+      <item itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.memoryDatabaseTest" />
-        <item itemvalue="JUnit.ModelTest" />
-        <item itemvalue="JUnit.ie.gmit in test" />
-        <item itemvalue="JUnit.All in test" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ModelTest" />
+        <item itemvalue="JUnit.memoryDatabaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +150,8 @@
       <workItem from="1588946646900" duration="83000" />
       <workItem from="1588946761401" duration="14099000" />
       <workItem from="1589033750869" duration="7927000" />
-      <workItem from="1589042663881" duration="3696000" />
+      <workItem from="1589042663881" duration="5796000" />
+      <workItem from="1589048930728" duration="9695000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>
@@ -179,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589045575468</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="All configurations fixed and fixed the test errors in maven">
+      <created>1589046823861</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589046823861</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,11 +206,13 @@
     <MESSAGE value="Fixed Code and got rid of unwanted variables" />
     <MESSAGE value="Edited code" />
     <MESSAGE value="fixed file configurations for the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed file configurations for the project" />
+    <MESSAGE value="All configurations fixed and fixed the test errors in maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="All configurations fixed and fixed the test errors in maven" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweng_cd_project$memoryDatabaseTest.ic" NAME="memoryDatabaseTest Coverage Results" MODIFIED="1589041595788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ie.gmit.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/sweng_cd_project$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1589118171726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
