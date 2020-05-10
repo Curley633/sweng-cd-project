@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,9 +129,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JUnit.memoryDatabaseTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ModelTest" />
-        <item itemvalue="JUnit.memoryDatabaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +149,7 @@
       <workItem from="1588946761401" duration="14099000" />
       <workItem from="1589033750869" duration="7927000" />
       <workItem from="1589042663881" duration="5796000" />
-      <workItem from="1589048930728" duration="9695000" />
+      <workItem from="1589048930728" duration="12470000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>
@@ -181,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589046823861</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ModelTest Tests completed with 100% coverage">
+      <created>1589118484118</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589118484118</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +212,8 @@
     <MESSAGE value="Edited code" />
     <MESSAGE value="fixed file configurations for the project" />
     <MESSAGE value="All configurations fixed and fixed the test errors in maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="All configurations fixed and fixed the test errors in maven" />
+    <MESSAGE value="ModelTest Tests completed with 100% coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="ModelTest Tests completed with 100% coverage" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweng_cd_project$memoryDatabaseTest.ic" NAME="memoryDatabaseTest Coverage Results" MODIFIED="1589041595788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
