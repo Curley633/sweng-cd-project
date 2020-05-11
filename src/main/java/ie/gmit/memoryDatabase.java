@@ -9,6 +9,7 @@ public class memoryDatabase {
     private static PreparedStatement productIDStatement;
     private static PreparedStatement decrementQuantityStatement;
     private static PreparedStatement capacityAndPriceStatement;
+    private static PreparedStatement priceStatement;
     private static PreparedStatement brandStatement;
 
     public static String getConnection() {
@@ -29,10 +30,7 @@ public class memoryDatabase {
 
     public static ArrayList<String> getMemTypes() {
         try{
-            System.out.println("In getMemTypes");
             getConnection();
-            System.out.println("After getConnection Called");
-
             getMemoryTypesStatement = connection.prepareStatement("SELECT memorytype from MemoryStock WHERE quantity > 0");
             ResultSet result = getMemoryTypesStatement.executeQuery();
 
@@ -45,7 +43,6 @@ public class memoryDatabase {
                     array.add(result.getString("memorytype"));
                 }
             }
-            System.out.println("All Memory Types have been Selected!");
             System.out.println(array);
             return array;
         }
@@ -54,7 +51,8 @@ public class memoryDatabase {
         }
         return null;
     }
-    public static int  getProductID(String memType, int index){
+
+    public static int getProductID(String memType, int index){
         ArrayList<Integer> array = new ArrayList<Integer>();
 
         try{
@@ -79,14 +77,11 @@ public class memoryDatabase {
         }
     }
 
-    public static int decrementQuantity(int productID) {
+    public static int decrementQuantity(int productID, int quantity) {
         int result = 0;
         try {
-            System.out.println("In decrementQuantity");
             getConnection();
-            System.out.println("After getConnection Called");
-
-            decrementQuantityStatement = connection.prepareStatement("UPDATE MemoryStock SET quantity = quantity - 1 WHERE productID = '"
+            decrementQuantityStatement = connection.prepareStatement("UPDATE MemoryStock SET quantity = quantity - '"+ quantity +"' WHERE productID = '"
                     + productID + "' AND quantity > 0");
             result = decrementQuantityStatement.executeUpdate();
 
@@ -101,23 +96,50 @@ public class memoryDatabase {
         return result;
     }
 
+    public static double getPrice(int productID)
+    {
+        double price = 0;
+
+        try {
+            getConnection();
+            priceStatement = connection.prepareStatement("SELECT price from MemoryStock WHERE productID = '"+ productID +"'");
+
+            ResultSet result = priceStatement.executeQuery();
+
+            while(result.next()){
+                price = result.getInt("price");
+                System.out.println(price);
+            }
+            System.out.println(price);
+            return price;
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        return price;
+    }
+
+
     public static ArrayList<String> getCapacityAndPrice(String selectedMemoryType) throws Exception{
         try{
-            System.out.println("In getCapacityAndPrice");
             getConnection();
-            System.out.println("After getConnection Called");
-
             capacityAndPriceStatement = connection.prepareStatement("SELECT capacity, price from MemoryStock WHERE memorytype = '"+ selectedMemoryType +"' AND quantity > 0" );
 
             ResultSet result = capacityAndPriceStatement.executeQuery();
 
             ArrayList<String> array = new ArrayList<String>();
+            ArrayList<String> priceArray = new ArrayList<>();
             String capAndPrice;
+            String price;
             while(result.next()){
                 capAndPrice = result.getString("capacity") + "GB €" + result.getString("price");
+                price = result.getString("price");
+
                 array.add(capAndPrice);
+                priceArray.add(price);
             }
             System.out.println(array);
+            System.out.println(priceArray);
             return array;
         }
         catch (Exception e){
@@ -125,13 +147,11 @@ public class memoryDatabase {
         }
         return null;
     }
+
     public static String getBrand(int productID) throws Exception{
         String brand = "";
         try{
-            System.out.println("In getBrand");
             getConnection();
-            System.out.println("After getConnection Called");
-
             brandStatement = connection.prepareStatement("SELECT brand from MemoryStock WHERE productID = '"+ productID+"' AND quantity > 0" );
 
             ResultSet result = brandStatement.executeQuery();
@@ -148,5 +168,10 @@ public class memoryDatabase {
             System.out.println(e);
         }
         return null;
+    }
+
+    private void seperatePrice(String capacity)
+    {
+
     }
 }
