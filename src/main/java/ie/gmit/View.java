@@ -27,7 +27,7 @@ public class View extends JPanel implements ActionListener, Runnable {
     private JTextField firstnameTextfield;
     private JTextField lastnameTextfield;
     private JTextField deliveryCountryTextfield;
-    private JTextField qtyTextfield;
+    private JTextField quantityTextfield;
 
     private JButton confirmOrderButton;
     private JButton show;
@@ -36,11 +36,11 @@ public class View extends JPanel implements ActionListener, Runnable {
     ArrayList<String> finalMemoryTypes;
     ArrayList<String> capAndPrice = new ArrayList<String>();
 
-    public View(String title) {
+    public View() {
         firstnameTextfield = new JTextField();
         lastnameTextfield = new JTextField();
         deliveryCountryTextfield = new JTextField();
-        qtyTextfield = new JTextField();
+        quantityTextfield = new JTextField();
 
         final String[] type = new String[1];
         ArrayList<String> memoryTypes = new ArrayList<String>();
@@ -90,12 +90,7 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setFrame(JFrame frame) {
         this.frame = frame;
     }
-    public JLabel getMemoryTypeLabel() {
-        return memoryTypeLabel;
-    }
-    public void setMemoryTypeLabel(JLabel memoryTypeLabel) {
-        this.memoryTypeLabel = memoryTypeLabel;
-    }
+
     public JComboBox getTypeComboBox() {
         return typeComboBox;
     }
@@ -108,11 +103,18 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setCapacityComboBox(JComboBox capComboBox) {
         this.capComboBox = capComboBox;
     }
+    /*
     public JLabel getFirstnameLabel() {
         return firstnameLabel;
     }
     public void setFirstnameLabel(JLabel firstnameLabel) {
         this.firstnameLabel = firstnameLabel;
+    }
+    public JLabel getMemoryTypeLabel() {
+        return memoryTypeLabel;
+    }
+    public void setMemoryTypeLabel(JLabel memoryTypeLabel) {
+        this.memoryTypeLabel = memoryTypeLabel;
     }
     public JLabel getCountryLabel() {
         return countryLabel;
@@ -120,6 +122,7 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setCountryLabel(JLabel countryLabel) {
         this.countryLabel = countryLabel;
     }
+     */
     public JTextField getFirstnameTextfield() {
         return firstnameTextfield;
     }
@@ -132,18 +135,28 @@ public class View extends JPanel implements ActionListener, Runnable {
     public void setLastnameTextfield(JTextField lastnameTextfield) {
         this.lastnameTextfield = lastnameTextfield;
     }
+
+    public JTextField getQuantityTextfield() {
+        return quantityTextfield;
+    }
+    public void setQuantityTextfield(JTextField quantityTextfield) {
+        this.lastnameTextfield = lastnameTextfield;
+    }
+
     public JTextField getDeliveryCountryTextfield() {
         return deliveryCountryTextfield;
     }
     public void setDeliveryCountryTextfield(JTextField deliveryCountryTextfield) {
         this.deliveryCountryTextfield = deliveryCountryTextfield;
     }
+
     public JButton getConfirmOrderButton() {
         return confirmOrderButton;
     }
     public void setConfirmOrderButton(JButton confirmOrderButton) {
         this.confirmOrderButton = confirmOrderButton;
     }
+
     public JButton getClose() {
         return close;
     }
@@ -201,12 +214,12 @@ public class View extends JPanel implements ActionListener, Runnable {
                         .addComponent(deliveryCountryTextfield)
                         .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(capComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(qtyTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(quantityTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addComponent(detailsLabel)
                         .addComponent(close))
-                        .addComponent(confirmOrderButton));
+                .addComponent(confirmOrderButton));
 
         layout.setVerticalGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
@@ -225,7 +238,7 @@ public class View extends JPanel implements ActionListener, Runnable {
                         .addComponent(capacityLabel).addComponent(capComboBox))
 
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(qtyLabel).addComponent(qtyTextfield)
+                        .addComponent(qtyLabel).addComponent(quantityTextfield)
                         .addComponent(close).addComponent(confirmOrderButton))
 
         );

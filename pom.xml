@@ -14,6 +14,13 @@
         <maven-compiler.target>1.8</maven-compiler.target>
     </properties>
 
+    <distributionManagement>
+        <site>
+            <id>github-project-site</id>
+            <url>gitsite:git@github.com/jenkinsci/sweng-cd-project</url>
+        </site>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -68,6 +75,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>3.0.0-M1</version>
+            <type>maven-plugin</type>
         </dependency>
     </dependencies>
 
