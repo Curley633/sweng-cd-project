@@ -102,7 +102,8 @@ public class Controller {
                     + "Price Inc VAT: €" + priceIncVAT * model.getQuantity()
                     + "\n\t" + "Est Delivery: " + estimatedDelivery + " days", "Info", JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception ignored){
-            JOptionPane.showMessageDialog(null, "please input a valid number");
+            System.out.println(ignored);
+           // JOptionPane.showMessageDialog(null, "please input a valid number");
             return 0;
         }
         return 1;
