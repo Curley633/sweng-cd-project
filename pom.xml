@@ -16,8 +16,8 @@
 
     <distributionManagement>
         <site>
-            <id>github-project-site</id>
-            <url>gitsite:git@github.com/jenkinsci/sweng-cd-project</url>
+            <id></id>
+            <url></url>
         </site>
     </distributionManagement>
 
