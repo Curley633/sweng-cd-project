@@ -1,5 +1,6 @@
 package ie.gmit;
 
+import org.junit.Before;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,7 +29,6 @@ public class ControllerTest {
     public void testOrderDetails() {
         assertEquals(0, controller.getOrderDetails("Joe", "Bloggs", "IRE", "RAM", "8GB", 1));
     }
-
     @DisplayName("Testing Calculating Additional costs")
     @Test
     public void testCalculateCosts() {
