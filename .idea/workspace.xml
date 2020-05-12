@@ -2,48 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_aether_provider_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_core_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_model_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_model_builder_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_api_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_repository_metadata_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_settings_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_settings_builder_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_plugins_maven_deploy_plugin_maven_plugin_3_0_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_artifact_transfer_0_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_common_artifact_filters_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_shared_utils_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_classworlds_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_component_annotations_1_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_interpolation_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_aether_aether_api_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_aether_aether_impl_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_aether_aether_spi_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_aether_aether_util_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_cipher_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_sec_dispatcher_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_sisu_sisu_guice_noaop_2_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_sisu_sisu_inject_bean_1_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_sisu_sisu_inject_plexus_1_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/AdditionalCosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/AdditionalCosts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/memoryDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/AdditionalCostsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/AdditionalCostsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/memoryDatabaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweng-cd-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sweng-cd-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ControllerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="225" />
+    <option name="myElementSize" value="110" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -77,6 +38,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\m3gha\.m2\repository" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1bd0QKrn7IJ2vZEdUeDxvoTBTVD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -108,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.gmit.Main" />
       <module name="sweng-cd-project" />
@@ -118,6 +91,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sweng-cd-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.gmit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.gmit" />
+      <option name="MAIN_CLASS_NAME" value="ie.gmit.ControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,40 +143,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="memoryDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sweng-cd-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.gmit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.gmit" />
-      <option name="MAIN_CLASS_NAME" value="ie.gmit.memoryDatabaseTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sweng-cd-project/target/site/jacoco/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="JUnit.memoryDatabaseTest" />
       <item itemvalue="JUnit.ModelTest" />
       <item itemvalue="JUnit.ModelTest.testGetCountry" />
+      <item itemvalue="JUnit.ControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ControllerTest" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JUnit.ModelTest" />
         <item itemvalue="JUnit.ModelTest.testGetCountry" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.memoryDatabaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +178,7 @@
       <workItem from="1589033750869" duration="7927000" />
       <workItem from="1589042663881" duration="5796000" />
       <workItem from="1589048930728" duration="29826000" />
-      <workItem from="1589196964272" duration="6864000" />
+      <workItem from="1589196964272" duration="20978000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>
@@ -258,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589141716644</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Additional cost test completed and updated model test with new parameters">
+      <created>1589204094025</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589204094025</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,23 +265,13 @@
     <MESSAGE value="ModelTest Tests completed with 100% coverage" />
     <MESSAGE value="James has memoryDatabaseTest completed with 85% coverage, we cant test negative values as havent setup a mock database" />
     <MESSAGE value="Additional costs added for delivery country and cost" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional costs added for delivery country and cost" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Additional cost test completed and updated model test with new parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additional cost test completed and updated model test with new parameters" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweng_cd_project$memoryDatabaseTest.ic" NAME="memoryDatabaseTest Coverage Results" MODIFIED="1589041595788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ie.gmit.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sweng_cd_project$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1589118171726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/sweng_cd_project$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1589292902508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
