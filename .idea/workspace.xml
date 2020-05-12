@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ef2a2e3a-ec30-4974-a38b-401bbcc3c591" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/gmit/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ie/gmit/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/gmit/ControllerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +176,7 @@
       <workItem from="1589033750869" duration="7927000" />
       <workItem from="1589042663881" duration="5796000" />
       <workItem from="1589048930728" duration="29826000" />
-      <workItem from="1589196964272" duration="20978000" />
+      <workItem from="1589196964272" duration="21483000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Code and got rid of unwanted variables">
       <created>1588971912162</created>
@@ -236,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589204094025</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added Controller test to test the catch the exceptions">
+      <created>1589294372652</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589294372652</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +271,8 @@
     <MESSAGE value="James has memoryDatabaseTest completed with 85% coverage, we cant test negative values as havent setup a mock database" />
     <MESSAGE value="Additional costs added for delivery country and cost" />
     <MESSAGE value="Additional cost test completed and updated model test with new parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional cost test completed and updated model test with new parameters" />
+    <MESSAGE value="Added Controller test to test the catch the exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Controller test to test the catch the exceptions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweng_cd_project$memoryDatabaseTest.ic" NAME="memoryDatabaseTest Coverage Results" MODIFIED="1589041595788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
